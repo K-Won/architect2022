@@ -8,5 +8,5 @@ RUN pip install numpy
 COPY ./classification_labeling_service ./classification_labeling_service
 VOLUME ["/DATA"]
 WORKDIR /classification_labeling_service
-CMD ./start.sh
+CMD python3 main.py
 
