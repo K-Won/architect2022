@@ -8,7 +8,7 @@ metadata:
 spec:
   capacity:
 # 스토리지 크기 결정 
-    storage: 5Gi
+    storage: 50Gi
   accessModes:
     # ReadWriteMany - multi node 에서 읽고 쓰기가 가능
     - ReadWriteMany 
