@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nfs-pvc
+spec:
+  selector:
+    matchLabels:
+      volume: nfs-pv-volume
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      # storage size to use
+      storage: 1Gi
