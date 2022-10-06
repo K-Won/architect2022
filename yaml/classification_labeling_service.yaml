@@ -2,24 +2,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: data-source-cifar10
+  name: classification_labeling_service
   labels:
-    app: data-source-cifar10
+    app: classification_labeling_service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: data-source-cifar10
+      app: classification_labeling_service
   template:
     metadata:
       labels:
-        app: data-source-cifar10
+        app: classification_labeling_service
     spec:
       nodeSelector:
         kubernetes.io/os: linux
       containers:
-      - name: data-source-cifar10
-        image: sncap/data_source_cifar10:v2.2
+      - name: classification_labeling_service
+        image: classification_labeling_service:v1.0
         resources:
           limits:
             cpu: 400m
@@ -31,12 +31,12 @@ spec:
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: data-source-cifar10
+  name: classification_labeling_service
 spec:
   scaleTargetRef:  # 스케일 아웃할 타겟 설정
     apiVersion: apps/v1
     kind: Deployment  #  스케일 아웃할 타겟의 종류 (deployment, replicaset 등)
-    name: data-source-cifar10
+    name: classification_labeling_service
   minReplicas: 1  # 최소 replicas 개수
   maxReplicas: 1  # 최대 replicas 개수
   metrics:
