@@ -1,0 +1,30 @@
+# Source: Genesis/charts/bdlstudio/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auto-labeling-service
+  labels:
+    app: auto-labeling-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auto-labeling-service
+  template:
+    metadata:
+      labels:
+        app: auto-labeling-service
+    spec:
+      nodeSelector:
+        kubernetes.io/os: linux
+      containers:
+      - name: auto-labeling-service
+        image: kwnsh1256/classification:v1.0
+        imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: 400m
+            memory: 1000Mi
+          requests:
+            cpu: 400m
+            memory: 500Mi
