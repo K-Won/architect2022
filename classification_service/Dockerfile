@@ -9,6 +9,5 @@ COPY ./classification_labeling_service ./classification_labeling_service
 VOLUME ["/DATA"]
 WORKDIR /classification_labeling_service
 
-#CMD /bin/bash
-#CMD python3 main.py
+CMD python3 main.py
 
