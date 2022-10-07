@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  namespace: rabbit
   name: rabbitmq
 spec:
   replicas: 1
