@@ -51,7 +51,6 @@ def worker(item, config):
     else:
         # DB 저장
         print("{} - [SUB]CLASSIFICATION_LABELING - {}".format(multiprocessing.current_process(), data))
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="[Data Processing] Main")
     parser.add_argument('--mq_ip', '-ip', default='70.70.10.39', type=str, help='rabbit mq ip')
