@@ -19,9 +19,7 @@ spec:
         kubernetes.io/os: linux
       containers:
       - name: classification-labeling-service
-        image: swa/classification_labeling_service:v1.0
-        # 로컬 docker image 사용
-        imagePullPolicy: Never
+        image: kwnsh1256/classification:v1.0
         resources:
           limits:
             cpu: 400m
