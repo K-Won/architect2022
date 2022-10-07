@@ -19,7 +19,7 @@ spec:
         kubernetes.io/os: linux
       containers:
       - name: text-labeling-service
-        image: kwnsh1256/text_labeling_service:v1.0
+        image: kwnsh1256/classification_labeling_service:v1.0
         imagePullPolicy: Always
         resources:
           limits:
