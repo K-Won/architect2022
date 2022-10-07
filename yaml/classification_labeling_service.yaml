@@ -19,7 +19,7 @@ spec:
         kubernetes.io/os: linux
       containers:
       - name: classification-labeling-service
-        image: kwnsh1256/classification:v1.0
+        image: kwnsh1256/classification:v2.0
         imagePullPolicy: Always
         resources:
           limits:
