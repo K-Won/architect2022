@@ -67,10 +67,10 @@ if __name__ == '__main__':
     parser.add_argument('--mq_ip', '-ip', default='rabbitmq', type=str, help='rabbit mq ip')
     parser.add_argument('--mq_port', '-port', default='5672', type=str, help='rabbit mq port')
     args = parser.parse_args()
-    data_publisher = DataPublisher(args.mq_ip, args.mq_port)
+    #data_publisher = DataPublisher(args.mq_ip, args.mq_port)
     i = 0
     while True:
         i += 1
         msg = get_msg()
-        data_publisher.send_msg()
+        #data_publisher.send_msg()
         print("{} : {}".format(i, get_msg()))
