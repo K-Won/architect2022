@@ -20,8 +20,7 @@ spec:
       containers:
       - name: classification-labeling-service
         image: kwnsh1256/classification:v1.0
-        imagePullPolicy: Always      
-        command: ['sh', '-c', 'echo 'xxx && sleep 6000']
+        imagePullPolicy: Always
         resources:
           limits:
             cpu: 400m
