@@ -20,6 +20,8 @@ spec:
       containers:
       - name: classification-labeling-service
         image: classification_labeling_service:v1.0
+        # 로컬 docker image 사용
+        imagePullPolicy: Never
         resources:
           limits:
             cpu: 400m
